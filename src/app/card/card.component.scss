@@ -1,0 +1,110 @@
+.activities{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: -10px;
+  column-gap: 20px;
+}
+
+.work-img, .play-img, .study-img, .exercise-img, .social-img,
+.self-care-img {
+  width: 300px;
+  height: 80px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 10px;
+  padding-left: 8px;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.activity {
+  // display: flex;
+  height: 100%;
+  // overflow: hidden;
+}
+
+.work {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  // overflow: hidden;
+}
+
+
+.work-content, .play-content, .study-content,
+.exercise-content, .social-content, .self-care-content {
+  background-color: hsl(235, 46%, 20%);
+  height: 100%;
+  width: 300px;
+  border-radius: 10px;
+  position: relative;
+  top: -30px;
+  left: 0;
+  z-index: 2;
+  padding: 14px;
+  // overflow: hidden;
+}
+
+.work-content:hover,
+.play-content:hover,
+.study-content:hover,
+.exercise-content:hover,
+.social-content:hover,
+.self-care-content:hover {
+  background-color: hsl(236, 44%, 31%);
+}
+
+.work-name, .play-name, .study-name,
+.exercise-name, .social-name, .self-care-name {
+  font-size: 18px;
+  font-weight: 500;
+  padding-left: 12px;
+}
+
+.work-current, .play-current, .study-current,
+.exercise-current, .social-current, .self-care-current {
+  font-size: 50px;
+  font-weight: 400;
+  margin: 10px 0 10px 0;
+  padding-left: 12px;
+}
+
+.work-past, .play-past, .study-past,
+.exercise-past, .social-past, .self-care-past {
+  font-weight: 300;
+  color: #9082e4;
+  padding-left: 12px;
+}
+
+.work-img {
+  background-color: hsl(15, 100%, 70%);
+  padding-right: 20px;
+  // overflow: hidden;
+}
+
+.play-img {
+  background-color: hsl(195, 74%, 62%);
+  padding-right: 20px;
+}
+
+.study-img {
+  background-color: hsl(348, 100%, 68%);
+  padding-right: 20px;
+}
+
+.exercise-img {
+  background-color: hsl(145, 58%, 55%);
+  padding-right: 20px;
+}
+
+.social-img {
+  background-color: hsl(264, 64%, 52%);
+  padding-right: 20px;
+}
+
+.self-care-img {
+  background-color: hsl(43, 84%, 65%);
+  padding-right: 20px;
+}

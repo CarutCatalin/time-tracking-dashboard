@@ -1,0 +1,19 @@
+<div class="main">
+  <div class="card">
+    <div class="card-main">
+      <img src="../assets/images/image-jeremy.png" class="jeremy" alt="image-jeremy">
+      <p>Report for</p>
+      <h1>Jeremy Robson</h1>
+    </div>
+    <div class="card-timeline">
+      <button [ngClass]="{'btn': true, 'clicked': dailySelected}"
+       (click)="selectedTimeframe = 'daily'; handleClick(1)">Daily</button>
+      <button [ngClass]="{'btn': true, 'clicked': weeklySelected}"
+       (click)="selectedTimeframe = 'weekly'; handleClick(2)">Weekly</button>
+      <button [ngClass]="{'btn': true, 'clicked': mounthlySelected}"
+       (click)="selectedTimeframe = 'monthly'; handleClick(3)">Monthly</button>
+    </div>
+  </div>
+  <app-card [selectedTimeframe]="selectedTimeframe"
+  [additionalText]="getAdditionalText()"></app-card>
+</div>

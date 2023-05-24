@@ -1,0 +1,22 @@
+<div class="activities">
+  <div *ngFor="let activity of act" class="activity">
+    <div [class]="activity.title.toLowerCase()">
+      <div [class]="activity.title.toLowerCase() + '-img'">
+        <img [src]="'../../assets/images/icon-'
+        + activity.title.toLowerCase() + '.svg'"
+        alt="{{ activity.title }} Image">
+      </div>
+      <div [class]="activity.title.toLowerCase() + '-content'">
+        <p [class]="activity.title.toLowerCase() + '-name'">{{activity.title}}</p>
+        <h2 [class]="activity.title.toLowerCase() + '-current'">
+          {{ activity.timeframes[selectedTimeframe].current }}hrs
+        </h2>
+        <div *ngIf="selectedTimeframe">
+          <h4 [class]="activity.title.toLowerCase() + '-past'">
+            {{ additionalText }} - {{ activity.timeframes[selectedTimeframe].previous }}hrs
+          </h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
